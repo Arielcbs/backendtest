@@ -8,8 +8,8 @@ services:
       - 27017:27017
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: strideruser
-      MONGO_INITDB_ROOT_PASSWORD: striderpass123
+      MONGO_INITDB_ROOT_USERNAME: backenduser
+      MONGO_INITDB_ROOT_PASSWORD: backendpass123
   
   # mongo-express:
   #   image: mongo-express
@@ -17,16 +17,16 @@ services:
   #   ports:
   #     - 8081:8081
 
-  striderBackend:
-    image: strider-backend:1.0.0
+  testBackend:
+    image: test-backend:1.0.0
     networks:
     - backendnet
     build: ./
     ports:
       - 3000:3000
     environment:
-      DB_USER: strideruser
-      DB_PASS: striderpass123
+      DB_USER: backenduser
+      DB_PASS: backendpass123
       DB_URL: mongo 
       DB_PORT: 27017
       API_PORT: 3000

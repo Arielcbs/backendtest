@@ -8,9 +8,9 @@
     "start": "node server.js",
     "test": "mocha"
   },
-  "name": "strider",
+  "name": "testbackend",
   "version": "1.0.0",
-  "description": "Strider backend challenge",
+  "description": "testBackend challenge",
   "main": "server.js",
   "keywords": [
     "Backend",

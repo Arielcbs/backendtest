@@ -16,9 +16,7 @@ exports.getUser = async (req,res) => {
         }else{
             res.status(400).json({error: {message: "Oops...Couldn't  fetch that user;"}});
         }
-        
-    }
-    
+    }  
 }
 
 exports.getUsers = async (req,res) => {

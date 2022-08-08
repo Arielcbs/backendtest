@@ -4,14 +4,14 @@ FROM node:16-alpine
 
 WORKDIR /app
 
-RUN addgroup -S stridergroup && adduser -S strideruser -G stridergroup && \
-	chown -R strideruser:stridergroup /app
+RUN addgroup -S testgroup && adduser -S testuser -G testgroup && \
+	chown -R testuser:testgroup /app
 
 # Set non-root user
-USER strideruser
+USER testuser
 
 
-COPY --chown=strideruser:stridergroup . /app
+COPY --chown=testuser:testgroup . /app
 
 
 RUN npm install

@@ -1,15 +1,23 @@
-# Backend test
+# Test backend
 
 This project consists of an API with 2 models, Users and Posts.
 
-The API consumes a MongoDB database
+The API consumes a MongoDB database.
 
-Project was made using NodeJS, Express and Mongoose to connect with mongo
+Project was made using NodeJS, Express and Mongoose to connect with mongo.
 
-For the automated tests and dev environment were used Mocha and Chai and Config
+For the automated tests and dev environment were used Mocha and Chai and Config.
 
 ## Installation
-To set up the environment in Docker check Docker Compose file
+To set up the environment in Docker, first create the Docker image for the backend, enter the folder of the Backend Test and:
+```
+docker build -t test-backend:1.0.0 .
+```
+Then we will need to pull the mongo image
+```
+docker pull mongo:latest
+```
+Now check Docker Compose file.
 If you wish to have some mocked data in first install, leave the "CREATE_MOCK" environment variable set to TRUE.
 Then in your terminal hit: 
 ```
