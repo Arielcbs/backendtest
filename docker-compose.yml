@@ -1,0 +1,45 @@
+version: "3.2"
+services:
+  mongo:
+    image: mongo:latest
+    networks:
+      - backendnet
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: strideruser
+      MONGO_INITDB_ROOT_PASSWORD: striderpass123
+  
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+
+  striderBackend:
+    image: strider-backend:1.0.0
+    networks:
+    - backendnet
+    build: ./
+    ports:
+      - 3000:3000
+    environment:
+      DB_USER: strideruser
+      DB_PASS: striderpass123
+      DB_URL: mongo 
+      DB_PORT: 27017
+      API_PORT: 3000
+      CREATE_MOCK: "true"
+    deploy:
+      resources:
+        reservations:
+          cpus: '1.0'
+          memory: 512M
+
+networks:
+  backendnet:
+
+
+volumes:
+  my-db:

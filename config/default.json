@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "dbUser": "strideruser",
+        "dbPass": "striderpass123",
+        "dbUrl": "localhost",
+        "dbPort": "27017",
+        "apiHost": "localhost",
+        "apiPort": "3000",
+        "createMock": "true"
+    }
+}

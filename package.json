@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "name": "strider",
+  "version": "1.0.0",
+  "description": "Strider backend challenge",
+  "main": "server.js",
+  "keywords": [
+    "Backend",
+    "Node",
+    "Express",
+    "MongoDB",
+    "API"
+  ],
+  "author": "Ariel Bertolotti",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "config": "^3.3.7",
+    "mocha": "^10.0.0"
+  }
+}
