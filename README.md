@@ -1,4 +1,4 @@
-# Strider backend
+# Backend test
 
 This project consists of an API with 2 models, Users and Posts.
 
