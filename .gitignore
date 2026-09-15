@@ -1,0 +1,6 @@
+
+# Local dependency and verification outputs
+node_modules/
+build/
+dist/
+__pycache__/

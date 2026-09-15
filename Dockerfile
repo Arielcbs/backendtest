@@ -1,6 +1,6 @@
 # See the README.md for usage and configuration info
 
-FROM node:16-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ USER testuser
 COPY --chown=testuser:testgroup . /app
 
 
-RUN npm install
+RUN npm ci --ignore-scripts --no-audit
 
 # Starts the service
 CMD ["npm", "start"]
